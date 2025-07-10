@@ -6,6 +6,7 @@
 #include <time.h>
 
 // сортировки
+void SelectSort(int *arr, int size);  // сортировка выбором
 
 // утилиты
 void generate_random_array(int *arr, int size);  // создание рандомного массива

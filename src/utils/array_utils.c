@@ -14,12 +14,16 @@ void generate_increasing_array(int *arr, int size) {
     }
 }
 
-// void generate_decreasing_array(int *arr, int size) {}
+void generate_decreasing_array(int *arr, int size) {
+    for (int i = 0; i < size; i++) {
+        arr[i] = size - i;
+    }
+}
 
 void print_array(int *arr, int size) {
     printf("[");
     for (int i = 0; i < size; i++) {
-        if (i != 99) {
+        if (i != size - 1) {
             printf("%d ", arr[i]);
         } else {
             printf("%d", arr[i]);
