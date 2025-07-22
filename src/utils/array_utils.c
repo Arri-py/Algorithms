@@ -32,3 +32,19 @@ void print_array(int *arr, int size) {
     printf("]");
     printf("\n");
 }
+
+void measure_time(SortFunc sort, int *arr, int size) {
+    int arr_copy[size];
+    memcpy(arr_copy, arr, size * sizeof(int));
+
+    clock_t start = clock();
+    sort(arr_copy, size);
+    clock_t end = clock();
+
+    double time_spent = ((double)(end - start) * 1000 / CLOCKS_PER_SEC);
+    printf("Время: %.3f мс\n", time_spent);
+}
+
+void print_sort_result(SortFunc sort, int *arr, int size, const char *name){
+    
+}

@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 // сортировки
@@ -15,6 +16,12 @@ void generate_increasing_array(int *arr,
 void generate_decreasing_array(int *arr,
                                int size);  // создание убывающего массива
 
-void print_array(int *arr, int size);
+void print_array(int *arr, int size);  // простой вывод массива
+
+typedef void (*SortFunc)(int *, int);
+
+void measure_time(SortFunc sort, int *arr, int size);  // функция для замера времени выполнения алгоритма
+
+void print_sort_result(SortFunc sort, int *arr, int size, const char *name);
 
 #endif
