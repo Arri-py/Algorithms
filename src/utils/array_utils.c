@@ -45,6 +45,4 @@ void measure_time(SortFunc sort, int *arr, int size) {
     printf("Время: %.3f мс\n", time_spent);
 }
 
-void print_sort_result(SortFunc sort, int *arr, int size, const char *name){
-    
-}
+// void print_sort_result(SortFunc sort, int *arr, int size, const char *name) {}
